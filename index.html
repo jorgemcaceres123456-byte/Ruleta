@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Crea tus propias ruletas, ajusta las probabilidades y deja que el azar decida." />
+    <meta name="theme-color" content="#13111b" />
+    <link rel="icon" type="image/svg+xml" href="/giralo.svg" />
+    <title>Gíralo — Estudio de ruletas</title>
+    <script>
+      try {
+        if (JSON.parse(localStorage.getItem('giralo:v1'))?.theme === 'light') {
+          document.documentElement.dataset.theme = 'light';
+          document.querySelector('meta[name="theme-color"]').content = '#fcfbff';
+        }
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
